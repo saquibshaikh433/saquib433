@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> first ML APPLICATION</title>
+	
+	<link rel="stylesheet" type="text/css" href="../static/styling.css">
+</head>
+
+<body>
+	
+	<div class="login">
+
+    	<form action="{{ url_for('predict')}}" method="post">
+    		<h1 id="heading"><b> Employee Hiring Salary Prediction</b></h1>
+    		<br>
+  			<div class="data">
+  				
+    			<label for="experience">Experience :</label>
+    			<input id="experience" type="number"  name="experience" placeholder="Year of experience" required="required" />
+    			<br><br>
+
+    			<label for="aptitude_score">Aptitude_score :</label>
+        		<input id="aptitude_score" type="number" name="aptitude_score" placeholder="out of 5" required="required" />
+        		<br><br>
+
+        		<label for="technical_score">Technical_score :</label>
+				<input id="technical_score" type="number" name="technical_score" placeholder="out of 10" required="required" />
+				<br><br>
+
+				<label for="sql">Sql_score :</label>
+				<input id="sql" type="number" name="sql" placeholder="out of 5" required="required" />
+				<br><br>
+
+				<label for="python">Python_score :</label>
+				<input id="python" type="number" name="python" placeholder="out of 5" required="required" />
+				<br><br>
+
+				<label for="html">html_score :</label>
+				<input id="html" type="number" name="html" placeholder="out of 5" required="required" />
+				<br><br>
+
+				<label for="spark">Spark_score :</label>
+				<input id="spark" type="number" name="spark" placeholder="out of 5" required="required" />
+				<br><br>
+
+				<label for="css">Css_score :</label>
+				<input id="css" type="number" name="css" placeholder="out of 5" required="required" />
+				<br><br>
+
+				<label for="machine_learning">Machine_learning :</label>
+				<input id="machine_learning" type="number" name="machine_learning" placeholder="out of 10" required="required" />
+				<br><br>
+
+				<label for="avg_score">Avg_score :</label>
+				<input id="avg_score" type="number" name="avg_score" placeholder="0-50" required="required" />
+				<br><br>
+        		<div class="butt">
+				<button type="Submit" class="btn btn-primary"><h2 style="color:blue;">Predict</h2></button>
+        		</div>
+			</div>
+    		
+    	</form>	
+    	<br>
+
+    	<h1 id="out">{{ prediction_text }}</h1>
+
+    </div>
+
+</body>
+</html>
